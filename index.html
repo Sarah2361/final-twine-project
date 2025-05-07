@@ -9,9 +9,18 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play New Version.</tw-noscript></noscript></tw-story>
-<tw-storydata name="New Version" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="E7B53A1C-DAB7-4C1C-90FB-24FB7660684D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="New Version" tags="" position="600,250" size="100,100">Congratulations! you have made it to the grand final of the singles championships! 
+<tw-storydata name="New Version" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="E7B53A1C-DAB7-4C1C-90FB-24FB7660684D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="example-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/background-example.jpg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+} </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
-[[the warm up]] </tw-passagedata><tw-passagedata pid="2" name="play" tags="" position="600,500" size="100,100">You&#39;ve won the coin toss and you&#39;ve chosen to serve. 
+
+</script><tw-passagedata pid="1" name="New Version" tags="" position="600,250" size="100,100">CONGRATULTIONS! 
+
+You have made it to the grand final of the women&#39;s singles championships! 
+
+[[warm up]] </tw-passagedata><tw-passagedata pid="2" name="play" tags="" position="600,500" size="100,100">You&#39;ve won the coin toss and you&#39;ve chosen to serve. 
 
 The score is 0-0. 
 
@@ -38,7 +47,7 @@ You&#39;re not winning or losing yet.
 
 [[Your second serve bounces high and she gets it back but its a weak shot]] 
 
-[[the seond serve lands outside the box]] </tw-passagedata><tw-passagedata pid="7" name="Your next serve is directed at the backhand" tags="" position="600,875" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="You try throwing a second serve to the forehand to throw her off" tags="" position="725,875" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="Your second serve hits the net" tags="" position="850,875" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Your second serve bounces high and she gets it back but its a weak shot" tags="" position="725,1000" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="the seond serve lands outside the box" tags="" position="850,1000" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="the warm up" tags="" position="600,375" size="100,100">You have just finished runnning through your routine: 
+[[the seond serve lands outside the box]] </tw-passagedata><tw-passagedata pid="7" name="Your next serve is directed at the backhand" tags="" position="600,875" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="You try throwing a second serve to the forehand to throw her off" tags="" position="725,875" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="Your second serve hits the net" tags="" position="850,875" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Your second serve bounces high and she gets it back but its a weak shot" tags="" position="725,1000" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="the seond serve lands outside the box" tags="" position="850,1000" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="warm up " tags="" position="600,375" size="100,100">You have just finished runnning through your routine: 
 
 Ground strokes (click-replace: &quot;Ground strokes&quot;) [Serves] (click-replace: &quot;Serves&quot;) [Second serves] (click-replace: &quot;Second serves&quot;) [Forehand] (click-replace: &quot;Forehand&quot;) [Backhand] (click-replace: &quot;Backhand&quot;) [Smash] (click-replace: &quot;Smash&quot;) [Forehand volley] (click-replace: &quot;Forehand volley&quot;) [Backhand volley] (click-replace: &quot;Backhand volley&quot;) [slices] 
 
@@ -47,22 +56,58 @@ Ground strokes (click-replace: &quot;Ground strokes&quot;) [Serves] (click-repla
 [[Ready]]  
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Ready" tags="" position="475,500" size="100,100">[[Play]] [[hello]]</tw-passagedata><tw-passagedata pid="14" name="Play" tags="" position="475,625" size="100,100">The score: 
+</tw-passagedata><tw-passagedata pid="13" name="Ready" tags="" position="475,500" size="100,100">[[Play]]</tw-passagedata><tw-passagedata pid="14" name="Play" tags="" position="475,625" size="100,100">(set: $typewriterText to &quot;The score: 
 
-Set: 0 0 
-Games: 0 0 
-Points: 0 0 
+SETS:  0 
+ GAMES: 0 
+ POINTS: 0 
+&quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.3)
 
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+] 
+[[Begin]] 
+
+</tw-passagedata><tw-passagedata pid="15" name="hits the net" tags="" position="350,750" size="100,100">You get another serve. Your second serve 
+
+
+[[Lands in but is soft and they return with a winner]] </tw-passagedata><tw-passagedata pid="16" name="is to the forehand" tags="" position="287.5,875" size="100,100"></tw-passagedata><tw-passagedata pid="17" name="is to the backhand" tags="" position="412.5,875" size="100,100"></tw-passagedata><tw-passagedata pid="18" name="Begin" tags="" position="600,1000" size="100,100">
 You walk up to the line. Your first serve 
 
 [[hits the net]] 
 
 [[is to the forehand]] 
 
-[[is to the backhand]] </tw-passagedata><tw-passagedata pid="15" name="hello" tags="" position="350,625" size="100,100"></tw-passagedata><tw-passagedata pid="16" name="hits the net" tags="" position="350,750" size="100,100">You get another serve. Your second serve 
+[[is to the backhand]] </tw-passagedata><tw-passagedata pid="19" name="Lands in but is soft and they return with a winner" tags="" position="350,1000" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="warm up" tags="example-background" position="725,375" size="100,100">You have just finished runnning through your routine: 
 
 
-[[lands in but is soft and they return with a winner]] </tw-passagedata><tw-passagedata pid="17" name="is to the forehand" tags="" position="287.5,875" size="100,100"></tw-passagedata><tw-passagedata pid="18" name="is to the backhand" tags="" position="412.5,875" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="lands in but is soft and they return with a winner" tags="" position="350,1000" size="100,100"></tw-passagedata></tw-storydata>
+&lt;img class=&quot;story-image&quot; src=&quot;./images/forehand.jpg&quot; alt=&quot;forehand&quot; /&gt;
+
+Ground strokes (click-replace: &quot;Ground strokes&quot;) [Serves] (click-replace: &quot;Serves&quot;) [Second serves] (click-replace: &quot;Second serves&quot;) [Forehand] (click-replace: &quot;Forehand&quot;) [Backhand] (click-replace: &quot;Backhand&quot;) [Smash] (click-replace: &quot;Smash&quot;) [Forehand volley] (click-replace: &quot;Forehand volley&quot;) [Backhand volley] (click-replace: &quot;Backhand volley&quot;) [slices] 
+
+(click: &quot;Ground strokes&quot;)[
+    (replace: ?imageSpot)[
+        (img: &quot;pictogram-2430305_640.jpg&quot;)
+    ]
+]
+
+|imageSpot&gt;[ ]
+
+
+(t8n-delay: 8s) + (t8n-arrive: &quot;fade-down&quot;) 
+
+
+[[Ready]]  
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
