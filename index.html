@@ -185,7 +185,10 @@ Now you&#39;re in the final. and you&#39;re up against Dani Makris - a strong pl
 [[Your opponent]] </tw-passagedata><tw-passagedata pid="19" name="aces you" tags="" position="725,1125" size="100,100">Theres nothing you can do. The crowd applauds. This knocks your confidence so much so that you now face every point she serves with trepidation.  
 
 
-It&#39;s going to be a tough match for you. </tw-passagedata><tw-passagedata pid="20" name="You win the first game" tags="" position="300,1000" size="100,100">You change ends. It&#39;s now going to be your serve. You take a sip of water at your seat - you want to have enough to give you energy but not too much.  
+It&#39;s going to be a tough match for you. 
+
+
+[[her next serve]] </tw-passagedata><tw-passagedata pid="20" name="You win the first game" tags="" position="300,1000" size="100,100">You change ends. It&#39;s now going to be your serve. You take a sip of water at your seat - you want to have enough to give you energy but not too much.  
 
 You walk over to the other end and the ball kid throws you a couple of balls.  
 
@@ -371,7 +374,30 @@ The last thing you want to do is care how this nenxt point pans out.
 
 [[the crowd]] </tw-passagedata><tw-passagedata pid="35" name="the crowd" tags="" position="300,2875" size="100,100">You&#39;ve won!! It takes a solid few moments for you to realise whats just happned. You finally beat Dani, youve taken teh title. You are now the womens singles champion!
 
-[[finally!]] </tw-passagedata><tw-passagedata pid="36" name="finally!" tags="" position="300,3000" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/champion.gif&quot; alt=&quot;champion&quot; /&gt;  </tw-passagedata></tw-storydata>
+[[finally!]] </tw-passagedata><tw-passagedata pid="36" name="finally!" tags="" position="300,3000" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/champion.gif&quot; alt=&quot;champion&quot; /&gt;  </tw-passagedata><tw-passagedata pid="37" name="her next serve" tags="" position="725,1250" size="100,100">The game doesn&#39;t go your way. It&#39;s over within 5 minutes. You can see Dani&#39;s confidence has boosted. Your team continue to encourge you. You start feeling sick. 
+
+On the chnage of ends you try calming yourself with a drink. Your head continues to spin. 
+
+
+[[What the score looks like]] </tw-passagedata><tw-passagedata pid="38" name="What the score looks like" tags="" position="725,1375" size="100,100">(set: $typewriterText to &quot;
+
+SETS:  Young: 0   Makris: 0 
+ GAMES: Young: 0  Makris: 3 
+ POINTS: Young: 0   Makris: 0 &quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.3)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
+[[Your next move]] </tw-passagedata><tw-passagedata pid="39" name="Your next move" tags="" position="725,1500" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
