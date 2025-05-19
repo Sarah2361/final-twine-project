@@ -326,7 +326,52 @@ You then end up leading 3-2 in the final set. Dani catches up to you and levels 
 [[Your next service game]] </tw-passagedata><tw-passagedata pid="30" name="Your next service game" tags="" position="300,2250" size="100,100">You lead 5-4. Dai serves out a great gme to level it at 5-5. 
 
 
-This is where the pressure builds. You can feel it from the crowd. </tw-passagedata></tw-storydata>
+This is where the pressure builds. You can feel it from the crowd. You look to your coach box. Their concerned faces are a distraction so you choose to look away. You don&#39;t look at Danni or her team. Theyre even more of a distractionn. You tell yourself once again what you went innto this match thinning: It doesnt matter if you lose - but what does matter is that youve given it your absolite best. And if your teaam isnt happy with that - so be it. 
+
+Youre ready. 
+
+You nod to the baallkid to throw you a ball. You then walk yourself up to the baseline and glance down the other end. 
+
+[[Your first serve]] </tw-passagedata><tw-passagedata pid="31" name="Your first serve" tags="" position="300,2375" size="100,100">You play a greaat service game. You can see Danani is now staarting to feel the pressure just from the frustration shes expressed to her team. 
+
+
+
+
+[[the score now]] </tw-passagedata><tw-passagedata pid="32" name="the score now" tags="" position="300,2500" size="100,100">(set: $typewriterText to &quot;
+
+SETS:  Young: 1   Makris: 1 
+ GAMES: Young: 6  Makris: 5 
+ POINTS: Young: 30  Makris: 30 &quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.3)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
+[[the final moments]] </tw-passagedata><tw-passagedata pid="33" name="the final moments" tags="" position="300,2625" size="100,100">Its 30 all. Dani is serving. She misses the first serve. This spikes some hope in you. You can see shes now strtng to tense up. Youre only 2 points away from victory. 
+
+Her second serve lands in and you smack a forehand down the line, exposing her weak backhand. She barely touches the ball. 
+
+The ccrowd roars. 
+
+Youre 1 point away from victory. 
+
+You choose not to look at your team - although you can sense them starting to get all ecstatic and excited. Dani looks stressed down the other end. This is exctly what you want. 
+
+The last thing you want to do is care how this nenxt point pans out. 
+
+[[championship point]] </tw-passagedata><tw-passagedata pid="34" name="championship point" tags="" position="300,2750" size="100,100">Dani&#39;s first serve lands in. You strike a forehand down the middle. Her next shot is a nice forehand cross court - but you read it early and return it just as powerful back to her forehand. She targets your bakchand, but you get that bck as well. She starts scrambling for answers. After hitting a forehand she runs into the net. But its not a good shot to come in on and you easily return it with a forehand winner down the line. 
+
+[[the crowd]] </tw-passagedata><tw-passagedata pid="35" name="the crowd" tags="" position="300,2875" size="100,100">You&#39;ve won!! It takes a solid few moments for you to realise whats just happned. You finally beat Dani, youve taken teh title. You are now the womens singles champion!
+
+[[finally!]] </tw-passagedata><tw-passagedata pid="36" name="finally!" tags="" position="300,3000" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/champion.gif&quot; alt=&quot;champion&quot; /&gt;  </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
