@@ -397,7 +397,52 @@ SETS:  Young: 0   Makris: 0
   ]
 ]
 
-[[Your next move]] </tw-passagedata><tw-passagedata pid="39" name="Your next move" tags="" position="725,1500" size="100,100"></tw-passagedata></tw-storydata>
+[[Your next move]] </tw-passagedata><tw-passagedata pid="39" name="Your next move" tags="" position="725,1500" size="100,100">You manage to win your next service game. You&#39;re finally on the board. However, the following game Dani serves a really great service game, and suddenly youre down 4-1. 
+
+This isn&#39;t ideal, and you start to become frustrated. 
+
+You start to panic - things are now looking exactly like the last final you were in - which you lost. It was devastating. Your head starts to spin. You&#39;re trying desperately to come up with answers. 
+
+On the chnage of ends you sit down and have a drink, hoping this will help calm your thoughts. 
+
+You get distracted during the break, looking over at your team and wondering what they&#39;re thinking. Youre also aware that Dani is now a lot more confident, meaning shes going to be harder to beat. 
+
+
+[[the end of the first set]] </tw-passagedata><tw-passagedata pid="40" name="the end of the first set" tags="" position="725,1625" size="100,100">(set: $typewriterText to &quot;
+
+SETS:  Young: 0   Makris: 1 
+ GAMES: Young: 1  Makris: 6 
+ POINTS: Young: 0   Makris: 0 &quot;)
+(set: $charIndex to 0)
+(set: $typewriterSpeed to 0.3)
+
+(live: $typewriterSpeed)[
+  (if: $charIndex &lt; $typewriterText&#39;s length)[
+    (set: $charIndex to $charIndex + 1)
+    (print: (substring: $typewriterText, 1, $charIndex))
+    (if: $charIndex is $typewriterText&#39;s length)[
+      (stop:)
+    ]
+  ]
+]
+
+[[The change of ends]] 
+</tw-passagedata><tw-passagedata pid="41" name="The change of ends" tags="" position="725,1750" size="100,100">Youve just lost the first set 6-1. The majority of the crowd is now in favor of Dani, or so it seems. You need to get out of the arena ffor a bit. There are too many distractions. 
+
+You go to the umpire and ask if you can leave to go to the bathrrom. He finds someone to aaccompay you there. 
+
+Once youve closed the cubile door, you take a deep breath and sit on top of the toilet seat. You just sit there. You can hear the music playing in the arena , the whoops and cheers frm the crowd. Theyre probabl doing a giant mexican wave or somehting. 
+
+You know youre going to have to do somethign amazing ot be able to turn this maatch around. 
+
+You start to think - maybe you just need to hit more balls in. The ratio of unforced errors seems to be 20% Dani and 80% you. Maybe even more for you. 
+
+&quot;Just hit more balls in the court&quot; you tell yourself. &quot;Be more consistant. Mke her have to earn the win, rather than jsut serving it to her.&quot; 
+
+[[You re-enter the arena]] </tw-passagedata><tw-passagedata pid="42" name="You re-enter the arena" tags="" position="725,1875" size="100,100">You start the second set off on your serice game. You manage to take the first game at 40-30, so it wasn&#39;t as quick as you wouldve liked. Your aim is to try and get yourself out of jail in this set. 
+
+
+At some point you end up leading this set 3-2. Youre starting to get closer. </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
