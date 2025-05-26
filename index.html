@@ -551,26 +551,15 @@ You’ve had enough. You’re too stressed for this. You raise your racket and b
 
 You start yelling at your team for stressing you out.  You pick up your racket (now with a broken frame) and head over to your bags to replace it.  
 
-[[You&#39;re now 5-1 down]] </tw-passagedata><tw-passagedata pid="50" name="You&#39;re now 5-1 down" tags="" position="100,1250" size="100,100">You lose the next game. 
+[[You&#39;re now 5-1 down]] </tw-passagedata><tw-passagedata pid="50" name="You&#39;re now 5-1 down" tags="" position="100,1250" size="100,100">The crowd is now jeering and booing. You know you&#39;re going to have to face your team after and apologize for your behaviour. The umpire issues you a code violation. 
+
+You sit down, feeling embarrassed, defeated and guilty. You can hear your coach telling you to move on and forget about it, to just concentrate on the next game. 
+
+You&#39;ve been brought up to not throw tantrums like this. Some people say it&#39;s a good thing - it&#39;s a release, you&#39;re letting your anger out rather than holding it in. But you can&#39;t seem to shake that feeling of guilt. 
 
 
-set: $typewriterText to &quot;
 
-SETS:  Young: 0   Makris: 1 
- GAMES: Young: 1  Makris: 6 
- POINTS: Young: 0   Makris: 0 &quot;)
-(set: $charIndex to 0)
-(set: $typewriterSpeed to 0.3)
-
-(live: $typewriterSpeed)[
-  (if: $charIndex &lt; $typewriterText&#39;s length)[
-    (set: $charIndex to $charIndex + 1)
-    (print: (substring: $typewriterText, 1, $charIndex))
-    (if: $charIndex is $typewriterText&#39;s length)[
-      (stop:)
-    ]
-  ]
-]
+You lose the next game. 
 
 [[The change of ends]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
